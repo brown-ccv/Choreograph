@@ -18,7 +18,7 @@ if(NOT CMAKE_BUILD_TYPE )
 endif()
 
 if(NOT DEBUG_SUFFIX AND CMAKE_BUILD_TYPE MATCHES "Debug")
- set(DEBUG_SUFFIX "d")
+ set(CMAKE_DEBUG_POSTFIX "d")
 endif()
 
 
