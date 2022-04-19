@@ -13,7 +13,13 @@ if(COMMAND cmake_policy)
   cmake_policy(SET CMP0003 NEW)
 endif(COMMAND cmake_policy)
 
-	
+if(NOT CMAKE_BUILD_TYPE )
+ set(CMAKE_BUILD_TYPE Debug)
+endif()
+
+if(NOT DEBUG_SUFFIX AND CMAKE_BUILD_TYPE MATCHES "Debug")
+ set(DEBUG_SUFFIX "d")
+endif()
 
 
 add_library(Choreograph STATIC
