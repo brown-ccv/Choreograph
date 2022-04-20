@@ -74,6 +74,7 @@ install(FILES
 		choreograph/phrase/Combine.hpp
 		choreograph/phrase/Procedural.hpp
 		choreograph/phrase/Sugar.hpp
+		choreograph/phrase/Hold.hpp
 		DESTINATION ${CMAKE_INSTALL_PREFIX}/include/choreograph/phrase)
 install(FILES 
 		choreograph/detail/MakeUnique.hpp
