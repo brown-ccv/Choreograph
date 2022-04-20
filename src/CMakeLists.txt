@@ -58,20 +58,28 @@ install(FILES
 		choreograph/Easing.h 	
 		choreograph/Timeline.h 
 		choreograph/TimelineItem.h 
-		choreograph/TimelineOptions.h 
+		choreograph/TimelineOptions.hpp
+		choreograph/TimeType.h
 		choreograph/Phrase.hpp 
 		choreograph/Sequence.hpp
-		choreograph/Combine.hpp
 		choreograph/Output.hpp
+		choreograph/Motion.hpp
+		DESTINATION ${CMAKE_INSTALL_PREFIX}/include/choreograph)
+
+
+install(FILES 
 		choreograph/phrase/Combine.hpp
 		choreograph/phrase/Ramp.hpp
 		choreograph/phrase/Retime.hpp
 		choreograph/phrase/Combine.hpp
 		choreograph/phrase/Procedural.hpp
 		choreograph/phrase/Sugar.hpp
+		DESTINATION ${CMAKE_INSTALL_PREFIX}/include/choreograph/phrase)
+install(FILES 
 		choreograph/detail/MakeUnique.hpp
 		choreograph/detail/VectorManipulation.hpp
-		DESTINATION ${CMAKE_INSTALL_PREFIX}/include/choreograph)
+		DESTINATION ${CMAKE_INSTALL_PREFIX}/include/choreograph/detail)
+
 install(TARGETS Choreograph EXPORT Choreograph DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 target_include_directories(Choreograph INTERFACE
 	$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include> )
