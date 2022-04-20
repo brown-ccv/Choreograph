@@ -71,7 +71,7 @@ install(FILES
 		choreograph/phrase/Sugar.hpp
 		choreograph/detail/MakeUnique.hpp
 		choreograph/detail/VectorManipulation.hpp
-		DESTINATION ${CMAKE_INSTALL_PREFIX}/include/Choreograph)
+		DESTINATION ${CMAKE_INSTALL_PREFIX}/include/choreograph)
 install(TARGETS Choreograph EXPORT Choreograph DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 target_include_directories(Choreograph INTERFACE
 	$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include> )
