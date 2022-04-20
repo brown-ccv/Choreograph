@@ -52,7 +52,26 @@ target_include_directories(Choreograph PUBLIC
   ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-install(FILES choreograph/Choreograph.h choreograph/Cue.h choreograph/Easing.h 	choreograph/Timeline.h choreograph/TimelineItem.h DESTINATION ${CMAKE_INSTALL_PREFIX}/include/Choreograph)
+install(FILES 
+		choreograph/Choreograph.h 
+		choreograph/Cue.h 
+		choreograph/Easing.h 	
+		choreograph/Timeline.h 
+		choreograph/TimelineItem.h 
+		choreograph/TimelineOptions.h 
+		choreograph/Phrase.hpp 
+		choreograph/Sequence.hpp
+		choreograph/Combine.hpp
+		choreograph/Output.hpp
+		choreograph/phrase/Combine.hpp
+		choreograph/phrase/Ramp.hpp
+		choreograph/phrase/Retime.hpp
+		choreograph/phrase/Combine.hpp
+		choreograph/phrase/Procedural.hpp
+		choreograph/phrase/Sugar.hpp
+		choreograph/detail/MakeUnique.hpp
+		choreograph/detail/VectorManipulation.hpp
+		DESTINATION ${CMAKE_INSTALL_PREFIX}/include/Choreograph)
 install(TARGETS Choreograph EXPORT Choreograph DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 target_include_directories(Choreograph INTERFACE
 	$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include> )
