@@ -13,6 +13,12 @@ if(COMMAND cmake_policy)
   cmake_policy(SET CMP0003 NEW)
 endif(COMMAND cmake_policy)
 
+if (POLICY CMP0025)
+   cmake_policy(SET CMP0025 NEW)
+  endif ()
+  cmake_policy(SET CMP0025 NEW)
+ SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++17 -pthread")
+
 if(NOT CMAKE_BUILD_TYPE )
  set(CMAKE_BUILD_TYPE Debug)
 endif()
