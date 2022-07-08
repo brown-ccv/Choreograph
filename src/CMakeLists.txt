@@ -88,6 +88,7 @@ install(FILES
 		DESTINATION ${CMAKE_INSTALL_PREFIX}/include/choreograph/detail)
 
 install(TARGETS Choreograph EXPORT Choreograph DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install(EXPORT Choreograph DESTINATION ${CMAKE_INSTALL_PREFIX}/)
 target_include_directories(Choreograph INTERFACE
 	$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include> )
 install(FILES ChoreographConfig.cmake DESTINATION ${CMAKE_INSTALL_PREFIX}/)
