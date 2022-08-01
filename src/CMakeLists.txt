@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.1) 
+cmake_minimum_required (VERSION 3.2 ) 
 
 project(Choreograph)
 
@@ -27,6 +27,9 @@ if(NOT DEBUG_SUFFIX AND CMAKE_BUILD_TYPE MATCHES "Debug")
  set(CMAKE_DEBUG_POSTFIX "d")
 endif()
 
+include_directories(
+	${CMAKE_CURRENT_SOURCE_DIR}
+)
 
 add_library(Choreograph STATIC
 	choreograph/Choreograph.h
@@ -52,10 +55,6 @@ add_library(Choreograph STATIC
 	choreograph/phrase/Retime.hpp
 	choreograph/phrase/Sugar.hpp
 	
-)
-
-target_include_directories(Choreograph PUBLIC
-  ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 install(FILES 
